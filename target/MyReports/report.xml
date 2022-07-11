@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="121.756">
+<testcase classname="Book Now functionality" name="Verify user able to book hotel rooms" time="25.845">
+<system-out><![CDATA[Given User access website URL...............................................passed
+When Click book now button..................................................passed
+Then Rooms information will appeared........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Verify login with invalid data" time="16.81">
+<system-out><![CDATA[Given Access website URL....................................................passed
+When Click sign in navigation link 2........................................passed
+And Enter invalid email and password........................................passed
+And Click sign in button 2..................................................passed
+Then User failed to login...................................................passed
+And Pop up error message box................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Verify register with valid data" time="22.927">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;id_gender1&quot;]&quot;}&#10;  (Session info: chrome=103.0.5060.66)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-CIUCSH0M', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 102.0.5005.27 (df4a85108ffa..., userDataDir: C:\Users\LENOVO IDEAPAD S34...}, goog:chromeOptions: {debuggerAddress: localhost:58468}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: e573e3e42a714a3ed3eaa4576a3f5783&#10;*** Element info: {Using=xpath, value=//*[@id=&quot;id_gender1&quot;]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given User open website URL.................................................passed
+When Click sign in navigation link 3........................................passed
+And Enter valid email.......................................................passed
+And Click create an account.................................................passed
+And Enter personal information..............................................failed
+And Click register button...................................................skipped
+Then User successfully register.............................................skipped
+And Showed success message box..............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="id_gender1"]"}
+  (Session info: chrome=103.0.5060.66)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-CIUCSH0M', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 102.0.5005.27 (df4a85108ffa..., userDataDir: C:\Users\LENOVO IDEAPAD S34...}, goog:chromeOptions: {debuggerAddress: localhost:58468}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e573e3e42a714a3ed3eaa4576a3f5783
+*** Element info: {Using=xpath, value=//*[@id="id_gender1"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepDefinitions.Register.Enter_personal_information(Register.java:54)
+	at ✽.Enter personal information(file:///C:/Rouvner/Automate/SeleniumApps/SmallProject2/src/test/features/Register.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="Search Now functionality" name="User wants to search hotel" time="25.7">
+<system-out><![CDATA[Given User on the home page.................................................passed
+When Enter hotel location...................................................passed
+And Select hotel............................................................passed
+And Select check in date....................................................passed
+And Select check out date...................................................passed
+And Click search now button.................................................passed
+Then Hotel room list will appear............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Interior Images functionality" name="Verify user able to slide the Interior images" time="12.589">
+<system-out><![CDATA[Given User access the website URL 1.........................................passed
+When Click slide button.....................................................passed
+Then Images will slides properly............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Verify login with valid data" time="17.173">
+<system-out><![CDATA[Given User access the website URL...........................................passed
+When Click sign in navigation link 1........................................passed
+And Enter valid email and valid password....................................passed
+And Click sign in button 1..................................................passed
+Then User successfully logged in............................................passed
+And Able to see My Account page.............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
